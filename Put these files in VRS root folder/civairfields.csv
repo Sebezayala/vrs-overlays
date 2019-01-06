@@ -1,7 +1,7 @@
 latfield,lonfield,title,icao,iata,runways,chart,tower,atis,ground,approach,airground,afis
 51.8942,-2.1672,"Gloucestershire Airport, Staverton",EGBJ,GLO,"04, 22, 09, 27, 18, 36",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=73&Itemid=122.html,122.905,127.48,None,"128.555, 120.980",None,None
-51.6681,-2.0569,"Cotswold Airport, Kemble",EGBP,GBA,"08, 26",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=84&Itemid=133.html,None,None,None,None,None,118.430
-51.8369,-1.32,Oxford (Kidlington),EGTK,OXF,"01, 19, 03, 21, 09, 27, 11, 29",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=113&Itemid=162.html,133.425,136.23,121.95,None,None,None
+51.6681,-2.0569,"Cotswold Airport, Kemble",EGBP,GBA,"08, 26",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=84&Itemid=133.html,None,None,None,None,None,118.43
+51.8369,-1.32,Oxford (Kidlington),EGTK,OXF,"01, 19, 03, 21, 09, 27, 11, 29",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=113&Itemid=162.html,133.43,136.23,121.955,None,None,None
 57.2019,-2.1978,Aberdeen Dyce Airport,EGPD,ABZ,"05, 23, 14, 32, 16, 34",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=12&Itemid=68.html,118.1,121.85,121.7,None,None,None
 49.7061,-2.2147,Alderney Airport,EGJA,ACI,"03, 21, 08, 26, 14, 32",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=13&Itemid=62.html,125.35,None,130.5,None,None,None
 51.895,0.4492,Andrewsfield Airport,EGSL,None,"09L, 27R, 09R, 27L",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=14&Itemid=69.html,None,None,None,None,130.55,None
@@ -84,3 +84,12 @@ latfield,lonfield,title,icao,iata,runways,chart,tower,atis,ground,approach,airgr
 59.3675,-2.4344,North Ronaldsay Airport,EGEN,NRL,"10, 28, 03, 21, 14, 32",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=108&Itemid=157.html,None,None,None,None,None,None
 52.6758,1.2828,Norwich International Airport,EGSH,NWI,"09, 27",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=109&Itemid=158.html,124.255,128.63,None,None,None,None
 52.92,-1.0792,Nottingham Airport,EGBN,NQT,"03, 21, 09, 27",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=110&Itemid=159.html,None,None,None,None,134.875,None
+56.4635,-5.3997,Oban Airport,EGEO,OBN,"01, 19",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=188&Itemid=270.html,None,None,None,None,None,118.05
+52.4975,1.0519,Old Buckenham Airport,EGSV,None,"02, 20, 07, 25, 07L, 25R",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=111&Itemid=160.html,None,None,None,None,124.4,None
+51.0989,-1.7842,Old Sarum Airfield,EGLS,None,"06, 24",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=112&Itemid=161.html,None,None,None,None,123.205,None
+52.0879,-0.3187,Old Warden Airfield,EGTH,HTF,"03, 21",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=246&Itemid=415.html,None,None,None,None,None,130.7
+59.3517,-2.9003,Papa Westray Airport,EGEP,PPW,"07, 25, 18, 36",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=115&Itemid=164.html,None,None,None,None,None,None
+51.7139,-4.3122,Pembrey Airport,EGFP,None,"04, 22",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=116&Itemid=165.html,None,None,None,None,124.4,None
+56.4392,-3.3722,Perth/Scone Airport,EGPT,PSL,"03, 21, 09, 27",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=118&Itemid=167.html,None,None,None,None,121.08,None
+52.4681,-0.2511,Peterborough/Conington,EGSF,None,"10, 28, 16, 34",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=119&Itemid=168.html,None,None,None,None,129.725,None
+55.5094,-4.5867,Glasgow Prestwick Airport,EGPK,PIK,"03, 21, 12, 30",http://www.nats-uk.ead-it.com/public/index.php%3Foption=com_content&task=blogcategory&id=122&Itemid=171.html,"118.150, 127.150",121.125,None,None,None,None
