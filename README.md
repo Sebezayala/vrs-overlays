@@ -18,7 +18,7 @@ Screenshot of working example:
 
 ![Screenshot](https://github.com/BoatrightTBC/vrs-overlays/blob/master/screenshot.PNG?raw=true)
 
-##Installation Instructions##
+## Installation Instructions
 
 * Download the files from Github (https://github.com/BoatrightTBC/vrs-overlays) using the green "Clone or Download" button. If you are used to Git, simply clone the repository, otherwise download the zip and extract the files somewhere.
 * *DO NOT* put the files in the "program files (x86)" folder where the VRS program files live. If you do, they will not survive an update. 
