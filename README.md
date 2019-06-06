@@ -30,18 +30,18 @@ Screenshot of working example:
 ...Recall that we are assuming your files are in c:\VRS\weather. If they're somewhere else replace that with your location in the following instructions. 
 
 * Hit new. 
- * Set "Inject file" to c:\VRS\weather\JSendOfBody.html
- * Set At to  END of BODY
- * Set Address to * 
- * Ensure "Enabled" is clicked.
+  * Set "Inject file" to c:\VRS\weather\JSendOfBody.html
+  * Set At to  END of BODY
+  * Set Address to * 
+  * Ensure "Enabled" is clicked.
 * Hit new again. 
- * Set "Inject file" to c:\VRS\weather\JSendOfHead.html
- * Set At to  END of HEAD
- * Set Address to * 
- * Ensure "Enabled" is clicked.
+  * Set "Inject file" to c:\VRS\weather\JSendOfHead.html
+  * Set At to  END of HEAD
+  * Set Address to * 
+  * Ensure "Enabled" is clicked.
 * Now, one of two choices: 
- * If you have already used the custom content plugin to overwrite default files, and have your site root folder set to some location, copy the contents of the c:\vrs\weather\web folder into that location. 
- * In the much more likely case that you've never done that, set the Site Root Folder at the bottom of the Options window to c:\VRS\weather\web 
+  * If you have already used the custom content plugin to overwrite default files, and have your site root folder set to some location, copy the contents of the c:\vrs\weather\web folder into that location. 
+  * In the much more likely case that you've never done that, set the Site Root Folder at the bottom of the Options window to c:\VRS\weather\web 
 * Hit ok 
 
 You should be completely done.  If it doesn't work, post an install problem report either on the above mentioned github page, or in the Virtual Radar Server installation problems forum. 
