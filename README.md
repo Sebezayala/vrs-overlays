@@ -16,7 +16,7 @@ The radar and cloud overlays are not on by default, simply hover over the icon i
 
 Screenshot of working example:
 
-![Screenshot](https://github.com/BoatrightTBC/vrs-overlays/blob/master/screenshot.PNG?raw=true)
+![Screenshot](https://github.com/BoatrightTBC/vrs-overlays/blob/USWeather/screenshot.PNG?raw=true)
 
 ## Installation Instructions
 
