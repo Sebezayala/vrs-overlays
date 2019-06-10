@@ -6,13 +6,23 @@ This plugin is derived from the work of 'nitro999'. You can see his overlay syst
 
 I have removed all of the  UK specific overlays and code and have switched the radar overlays to the US Nexrad overlays available at (https://mesonet.agron.iastate.edu/ogc/). Specifically, this version uses the nexrad-n0r-900913 tile set which is the "current" composite base reflectivity. See the above site for other tilesets offered by Iowa State. 
 
-Obviously, the radar overlay won't produce any radar returns outside the US - sorry.  I don't know of a leaflet tile radar source that is worldwide. 
+Obviously, the radar overlay won't produce any radar returns outside the US - sorry.  I don't know of a free leaflet tile radar source that is worldwide. 
 
-The cloud cover image is worldwide, updated once per day. The image tiles are from NASA using the leaflet interface to the EPSG:4326 imagry. You can see NASA's demo of this at (https://nasa-gibs.github.io/gibs-web-examples/examples/leaflet/geographic-epsg4326.html).
+There are two cloud cover images that are near real time. The first is the combined visible light north-american image from the GOES East and the GOES west geostationary weather satellites. The second is the north-american composite from those two in the IR. 
 
-Radar and Cloud overlay opacity is set to 30%. you can override this by editing the gnOpacity variable at the top of the "JSendOfBody.html" file. I haven't added it to the options. 
+There are three other sat image feeds available already set up in the system. 
 
-The radar and cloud overlays are not on by default, simply hover over the icon in the upper right of the map and click the one you want.  I do not reccomend both radar and clouds. 
+* Modis Terra True Color - a near-real-time feed of the multi-spectral scanner from NASA's MODIS satellite 
+* Suomi Viirs IR - a near-real-time feed of the IR band of the VIIRS instrument on the Suomi satellite 
+* Suomi Viirs Night time - a near-real-time feed of the VIIRS instrument images taken from the night-side of the earth 
+
+The problem with all three, and the reason by default they are disabled is that all three are low orbit polar satellites and "todays" image builds up during the day as the satellite images swaths of the earth in each orbit. So, depending on the exact positioning of the orbit today, the image may or may not yet have flown over where you are. Both sats are really more useful for comparing images over time to see changes. 
+
+If you want to turn them on, just edit the JSendOfBody.html file and remove the // from in front of the lines at line 163 and 182. 
+
+Radar and Cloud overlay opacity is set to my preference by default but, you can override this by adjusting the sliders in the Layer opacity control. 
+
+The radar and cloud overlays are not on by default, simply hover over the icon in the upper right of the map and click the one you want.
 
 Screenshot of working example:
 
@@ -46,4 +56,6 @@ Screenshot of working example:
 
 You should be completely done.  If it doesn't work, post an install problem report either on the above mentioned github page, or in the Virtual Radar Server installation problems forum. 
 
+## Update Instructions 
 
+Just replace the files you have with a fresh download from github. 
