@@ -2,7 +2,7 @@
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
 <script type="text/javascript">
 
-// Written by Chris Gault chrisgault@gmail.com
+// Written by Chris Gault chrisgault@gmail.com modified by Sebastian Ayala Sebezayala@gmail.com
 // Please see https://github.com/nitro999/vrs-overlays for latest UK version
 // See https://github.com/BoatrightTBC/vrs-overlays for the latest US version. 
 
@@ -45,7 +45,7 @@
 	// Grouped overlay options 
 	var goOptions = {
 		groupCheckboxes: false,
-		label: "Select Layers"
+		label: "Toggle Weather"
 		}
 
 	
@@ -57,7 +57,7 @@
 	// add opacity control 
 	L.control.opacity(
 		map_Overlays, {
-			label: "Layer Opacity",
+			label: "Weather Opacity",
 			collapsed: true,
 			position: "topright"
 		}
@@ -65,7 +65,18 @@
 	
 	// Add Layer control to OSM map
     L.control.groupedLayers(null, groupedOverlays, goOptions).addTo(map);
-	
+    
+    //Options for Measurement Plugin
+    Moptions = {
+        position: 'topleft',            // Position to show the control. Values: 'topright', 'topleft', 'bottomright', 'bottomleft'
+        unit: 'metres',                 // Show imperial or metric distances. Values: 'metres', 'landmiles', 'nauticalmiles'
+        clearMeasurementsOnStop: false,  // Clear all the measurements when the control is unselected
+        showClearControl: true,        // Show a control to clear all the measurements
+        showUnitControl: true,         // Show a control to change the units of measurements
+    };
+
+    //Add Measurement plugin
+    L.control.polylineMeasure(Moptions).addTo(map);
 	//Close the ifs from the top
                     }
                 });

@@ -4,3 +4,5 @@ This JavaScript code is a plugin for the ADSB aircraft tracking [Virtual Radar S
 
 This plugin is derived from the work of 'nitro999' and BoatrightTBC. You can see their overlay system at (https://github.com/nitro999/vrs-overlays) and (https://github.com/BoatrightTBC/vrs-overlays)
 
+This fork retains the Weather overlay and adds a distance measure tool.
+
