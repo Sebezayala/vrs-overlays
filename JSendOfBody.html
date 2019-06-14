@@ -32,138 +32,13 @@
             id: 'NexRad1',
             attribution: '<a href="https://mesonet.agron.iastate.edu/ogc/ IA State OGC Web Services</a>">',
             transparent: true,
-    		opacity: 0.3,
+    		opacity: 0.5,
             });
-	
-	// create Goes weather sat North American image layers
-	
-    // Visible light 
-	var gnaVisTemplate = 'https://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/goes-vis-1km-900913/{z}/{x}/{y}.png?_='+ time
-	var goesNAvis = L.tileLayer(gnaVisTemplate, {
-            maxZoom: 18,
-            id: 'GoesNAvis',
-            attribution: '<a href="https://mesonet.agron.iastate.edu/ogc/ IA State OGC Web Services</a>">',
-            transparent: true,
-    		opacity: 0.7,
-            });
-	
-	// Goes Infrared
-	var gnaIrTemplate = 'https://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/goes-ir-4km-900913/{z}/{x}/{y}.png?_='+ time
-	var goesNAir = L.tileLayer(gnaIrTemplate, {
-            maxZoom: 18,
-            id: 'GoesNAir',
-            attribution: '<a href="https://mesonet.agron.iastate.edu/ogc/ IA State OGC Web Services</a>">',
-            transparent: true,
-    		opacity: 0.7,
-            });
-	
-	//MODIS Terra true color (todays image may not be complete at times, depends on Sat orbit positions
-	var modisTemplate = '//gibs-{s}.earthdata.nasa.gov/wmts/epsg3857/best/MODIS_Terra_CorrectedReflectance_TrueColor/default/' + 
-		today + '/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg'
-	var modisTerra = L.tileLayer(modisTemplate, {
-		tileSize: 256,
-		maxZoom: 9,
-		subdomains: 'abc',
-		noWrap: true,
-		continuousWorld: true,
-		transparent: true,
-		opacity: 0.5,
-		// Prevent Leaflet from retrieving non-existent tiles on the
-		// borders.
-		bounds: [
-		  [-89.9999, -179.9999],
-		  [89.9999, 179.9999]
-		],
-		attribution:
-		  '<a href="https://wiki.earthdata.nasa.gov/display/GIBS">' +
-		  'NASA EOSDIS GIBS</a>&nbsp;&nbsp;&nbsp;' +
-		  '<a href="https://terra.nasa.gov/about/terra-instruments/modis">About Terra & Modis</a>'
-	  });
-
-	// Suomi polar satellite VIIRS imaging radiometer 
-	//(todays image may not be complete at times, depends on Sat orbit positions
-	var suomiTemplate = '//gibs-{s}.earthdata.nasa.gov/wmts/epsg3857/best/' + 	'VIIRS_SNPP_CorrectedReflectance_TrueColor/default/' + 
-		today + '/GoogleMapsCompatible_Level9/{z}/{y}/{x}.jpg'
-	var suomiViirs = L.tileLayer(suomiTemplate, {
-		tileSize: 256,
-		maxZoom: 9,
-		subdomains: 'abc',
-		noWrap: true,
-		continuousWorld: true,
-		transparent: true,
-		opacity: 0.5,
-		// Prevent Leaflet from retrieving non-existent tiles on the
-		// borders.
-		bounds: [
-		  [-89.9999, -179.9999],
-		  [89.9999, 179.9999]
-		],
-		attribution:
-		  '<a href="https://wiki.earthdata.nasa.gov/display/GIBS">' +
-		  'NASA EOSDIS GIBS</a>&nbsp;&nbsp;&nbsp;' +
-		  '<a href="https://jointmission.gsfc.nasa.gov/viirs.html">' +
-		  'VIIRS homepage' +
-		  '</a>'
-	  });
-	  
-	var suomiNight = L.tileLayer(
-		'//gibs-a.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_SNPP_DayNightBand_ENCC/default/' + 
-		today + '/EPSG3857_500m/{z}/{y}/{x}.png', {
-		tileSize: 256,
-		subdomains: 'abc',
-		noWrap: true,
-		continuousWorld: true,
-		transparent: true,
-		opacity: 0.5,
-		// Prevent Leaflet from retrieving non-existent tiles on the
-		// borders.
-		bounds: [
-		  [-89.9999, -179.9999],
-		  [89.9999, 179.9999]
-		],
-		attribution:
-		  '<a href="https://wiki.earthdata.nasa.gov/display/GIBS">' +
-		  'NASA EOSDIS GIBS</a>&nbsp;&nbsp;&nbsp;' +
-		  '<a href="https://jointmission.gsfc.nasa.gov/viirs.html">' +
-		  'VIIRS homepage' +
-		  '</a>'
-	  });
-	  // NASA Black Marble -- using merged image data from 2016. 
-      var blackMarble = L.tileLayer(
-		'//gibs-{s}.earthdata.nasa.gov/wmts/epsg3857/best/VIIRS_Black_Marble/default/' + 
-		'2016-01-01/EPSG3857_500m/{z}/{y}/{x}.png', {
-		maxZoom: 8,
-		tileSize: 256,
-		subdomains: 'abc',
-		noWrap: true,
-		continuousWorld: true,
-		transparent: true,
-		opacity: 0.5,
-		// Prevent Leaflet from retrieving non-existent tiles on the
-		// borders.
-		bounds: [
-		  [-89.9999, -179.9999],
-		  [89.9999, 179.9999]
-		],
-		attribution:
-		  'NASA EOSDIS GIBS&nbsp;' + 
-		  '<a href="https://worldview.earthdata.nasa.gov/?p=geographic&l=VIIRS_Black_Marble,VIIRS_SNPP_CorrectedReflectance_TrueColor(hidden),MODIS_Aqua_CorrectedReflectance_TrueColor(hidden),MODIS_Terra_CorrectedReflectance_TrueColor,VIIRS_Night_Lights,Reference_Labels(hidden),Reference_Features(hidden),Coastlines&t=2016-03-18-T00%3A00%3A00Z&z=3&v=-168.70613958385664,-30.24582939156661,101.29386041614336,94.62917060843338">Full earth sample</a>'
-	  });
-	
 			
     // Define overlay control menu items
     var groupedOverlays = {
         "Radar": {
-			"NexRad": nexRad,
-			"Day/Night terminator": dayNight
-			},
-		"Satellite Images": {
-			"GOES NA Visible": goesNAvis,
-			"GOES NA Infrared": goesNAir,
-//			"Modis Terra True Color" : modisTerra,
-//			"Suomi IR": suomiViirs,
-//			"Suomi Nightime": suomiNight ,
-			"Nasa Black Marble": blackMarble
+			"Weather": nexRad,
 			}
         }
     
@@ -176,13 +51,8 @@
 	
   	//Configure Opacity Control
 	var map_Overlays = {
-		"NexRad": nexRad,
-		"GOES NA Visible": goesNAvis,
-		"GOES NA Infrared": goesNAir,
-//		"Modis Terra True Color" : modisTerra,
-//		"Suomi IR": suomiViirs,
-//		"Suomi Nightime": suomiNight ,
-		"Nasa Black Marble": blackMarble
+		"Weather": nexRad,
+
 	}
 	// add opacity control 
 	L.control.opacity(
